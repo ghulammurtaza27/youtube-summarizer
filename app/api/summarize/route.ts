@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server'
 import { GoogleGenerativeAI } from '@google/generative-ai'
 
-const genAI = new GoogleGenerativeAI(process.env.GOOGLE_AI_API_KEY || 'AIzaSyB27bFO8Uchz5-5Kvp1WDNW-djldqcE7oU')
-const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY || 'AIzaSyB3eDOepkIxqE7J1kW41J7hd5lO5a3yu2A'
+const genAI = new GoogleGenerativeAI(process.env.GOOGLE_AI_API_KEY || '')
+const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY || ''
 
 async function getVideoInfo(videoId: string) {
   const response = await fetch(
